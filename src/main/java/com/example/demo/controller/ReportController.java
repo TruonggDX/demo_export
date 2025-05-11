@@ -35,6 +35,10 @@ public class ReportController {
       }
 
       // Đường dẫn đến file Jasper đã biên dịch
+
+      // fix : Chỗ này đang convert từ .jrxml -> jasper bằng tay .
+      // chỗ này se fix lại cho tự động convert khi run time
+
       String jasperPath = new File("src/main/resources/FristAReport.jasper").getAbsolutePath();
 
       // Tạo data source cho Jasper
