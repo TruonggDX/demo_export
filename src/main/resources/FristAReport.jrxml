@@ -1,0 +1,199 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="FristAReport" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mysql"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50.0" bold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18.0" bold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14.0" bold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle mode="Opaque" backcolor="#EEEFF0">
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle backcolor="#D8D8D8">
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<dataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<query language="sql"><![CDATA[]]></query>
+	</dataset>
+	<query language="SQL"><![CDATA[select * from employee]]></query>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="fullname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.label" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="phone"/>
+		<property name="com.jaspersoft.studio.field.label" value="phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<title height="81" splitType="Stretch">
+		<element kind="line" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246" x="0" y="80" width="556" height="1">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="0f86baff-6386-4f3f-b3fe-2388707babe8" x="415" y="10" width="50" height="20" hTextAlign="Right">
+			<text><![CDATA[Date:]]></text>
+			<box rightPadding="4"/>
+		</element>
+		<element kind="textField" uuid="bb10dbe1-0a4f-4722-9953-c163b63cf979" x="465" y="10" width="84" height="20" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="image" uuid="94883631-a913-43e2-b182-ab8d77d0181e" x="0" y="0" width="65" height="60" hImageAlign="Center">
+			<expression><![CDATA["invoice_logo.png"]]></expression>
+		</element>
+		<element kind="textField" uuid="3836ce65-eca3-4cad-a6de-b1818def0a2b" x="465" y="30" width="84" height="20" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA["INV0001"]]></expression>
+		</element>
+		<element kind="staticText" uuid="0b3f9342-da78-4cfa-9fc5-2301c4749678" x="415" y="30" width="50" height="20" hTextAlign="Right">
+			<text><![CDATA[Invoice #]]></text>
+			<box rightPadding="4"/>
+		</element>
+		<element kind="staticText" uuid="e622555d-198b-4ccd-a4a1-c59c53304058" x="95" y="0" width="210" height="25" fontSize="19.0" bold="true">
+			<text><![CDATA[Exo Company]]></text>
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="b8cc42fd-b569-497d-834d-7e854040ad18" x="95" y="55" width="205" height="15">
+			<text><![CDATA[0339205335]]></text>
+		</element>
+		<element kind="staticText" uuid="c226e44d-3bb5-4145-b0b3-903bf1d79fde" x="95" y="25" width="205" height="15">
+			<text><![CDATA[Thanh Xuan - Ha Noi]]></text>
+		</element>
+		<element kind="staticText" uuid="b96f7183-44f8-43ad-ba60-43d8fbf50b6e" x="95" y="40" width="205" height="15">
+			<text><![CDATA[Ha Noi]]></text>
+		</element>
+	</title>
+	<columnHeader height="39">
+		<element kind="staticText" uuid="8d6fb860-4233-498a-9406-a1d811fe373b" positionType="Float" x="0" y="9" width="111" height="20" forecolor="#000000" fontName="Arial" fontSize="12.0" bold="true" style="Column header">
+			<text><![CDATA[Id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f9d9e77-1780-4bc1-844b-450535ef3836"/>
+			<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+		</element>
+		<element kind="staticText" uuid="e5986643-25f7-48b7-b45a-e0f994ff8dc7" positionType="Float" x="111" y="9" width="111" height="20" forecolor="#000000" fontName="Arial" fontSize="12.0" bold="true" style="Column header">
+			<text><![CDATA[Address]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf03ea94-1a86-411c-b0fa-8070af77e7ca"/>
+		</element>
+		<element kind="staticText" uuid="3a749b6d-1bf2-4015-845e-9c96c4dc584f" positionType="Float" x="223" y="9" width="111" height="20" forecolor="#000000" fontName="Arial" fontSize="12.0" bold="true" style="Column header">
+			<text><![CDATA[Email]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="615f77e3-e43e-4b80-b19e-0fb1fba3d951"/>
+		</element>
+		<element kind="staticText" uuid="6583b0b8-257b-4128-8932-a5deea49be48" positionType="Float" x="334" y="9" width="111" height="20" forecolor="#000000" fontName="Arial" fontSize="12.0" bold="true" style="Column header">
+			<text><![CDATA[Fullname]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="495df742-105c-4007-81eb-8120fa0d195a"/>
+		</element>
+		<element kind="staticText" uuid="b517c6ba-13ba-4f2e-907e-57df7c913743" positionType="Float" x="445" y="9" width="111" height="20" forecolor="#000000" fontName="Arial" fontSize="12.0" bold="true" style="Column header">
+			<text><![CDATA[Phone]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e571d87f-31cd-44a3-9101-1a70565a7f34"/>
+		</element>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</columnHeader>
+	<detail>
+		<band height="40">
+			<element kind="textField" uuid="aca7cbd6-5456-42a3-9ac1-738ea1bf0872" positionType="Float" x="0" y="10" width="111" height="20" fontName="Arial" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" bold="false" style="Detail">
+				<expression><![CDATA[$F{id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f9d9e77-1780-4bc1-844b-450535ef3836"/>
+			</element>
+			<element kind="textField" uuid="8b6aac56-3ba4-4c03-a6d6-befa4078936e" positionType="Float" x="111" y="10" width="111" height="20" fontName="Arial" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" bold="false" style="Detail">
+				<expression><![CDATA[$F{address}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf03ea94-1a86-411c-b0fa-8070af77e7ca"/>
+			</element>
+			<element kind="textField" uuid="bdbf913c-3a8f-43cb-9b2b-233db93500a3" positionType="Float" x="222" y="10" width="111" height="20" fontName="Arial" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" bold="false" style="Detail">
+				<expression><![CDATA[$F{email}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="615f77e3-e43e-4b80-b19e-0fb1fba3d951"/>
+			</element>
+			<element kind="textField" uuid="5976c84e-4789-466c-867a-53be2e6e32ee" positionType="Float" x="333" y="10" width="111" height="20" fontName="Arial" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" bold="false" style="Detail">
+				<expression><![CDATA[$F{fullname}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="495df742-105c-4007-81eb-8120fa0d195a"/>
+			</element>
+			<element kind="textField" uuid="19b858de-e880-47db-9ef6-2450299f2cbb" positionType="Float" x="444" y="10" width="111" height="20" fontName="Arial" fontSize="12.0" textAdjust="StretchHeight" blankWhenNull="true" bold="false" style="Detail">
+				<expression><![CDATA[$F{phone}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e571d87f-31cd-44a3-9101-1a70565a7f34"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+	<lastPageFooter height="450">
+		<element kind="staticText" uuid="36aa233d-4305-48e6-974a-1bbf89bb3c8f" positionType="Float" mode="Opaque" x="6" y="420" width="556" height="30" backcolor="#E6E8E9" fontName="Serif" fontSize="9.0" italic="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[THANKYOU FOR YOUR BUSINESS]]></text>
+		</element>
+		<element kind="staticText" uuid="c93ebfa6-b079-40ec-b475-cc83fe563511" x="0" y="0" width="180" height="20" fontName="Tahoma" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Thong tin hop dong]]></text>
+		</element>
+		<element kind="staticText" uuid="4d692c67-0c9f-4560-90e5-f07aa5b3a8d8" x="0" y="20" width="550" height="310">
+			<text><![CDATA[HOP DONG BAO MAT THONG TIN (NDA)
+Hom nay, ngay 11 thang 5 nam 2025, tai Ha Noi, chung toi gom:
+
+Ben A (Cung cap thong tin):
+Ten: Cong ty EKKA
+Dia chi: Thanh Xuan, Ha Noi
+Dai dien: Nguyen Van A
+
+Ben B (Nhan thong tin):
+Ten: Nguyen Van B
+Dia chi: Cau Giay, Ha Noi
+Dai dien: Nguyen Van B
+
+Dieu 1. Muc dich
+Ben B cam ket bao mat toan bo thong tin lien quan den du an Website thuong mai dien tu EKKA, khong tiet lo cho bat ky ben thu ba nao khi chua duoc su dong y cua Ben A.
+
+Dieu 2. Pham vi thong tin
+Gom ma nguon, co so du lieu, thong tin nguoi dung, tai lieu ky thuat va cac thong tin noi bo khac co lien quan den du an.
+
+Dieu 3. Trach nhiem
+Ben B co trach nhiem su dung thong tin dung muc dich, khong sao chep, tiet lo, hoac chuyen giao trai phep. Moi hanh vi vi pham se bi xu ly theo quy dinh phap luat hien hanh.]]></text>
+		</element>
+	</lastPageFooter>
+</jasperReport>
